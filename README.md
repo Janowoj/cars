@@ -54,12 +54,12 @@ cars ( array of {id, name, cost}),
 
 4. Create a slice for each group of state
 
-Slice #1: 
+Form Slice: 
 
 changeName.js
 changeCost.js
 
-Slice #2:
+Cars Slice:
 
 changeTerm.js
 addCar.js
