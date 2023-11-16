@@ -25,7 +25,7 @@ function CarList() {
                     Delete
                 </button>
             </div>
-        )
+        );
     });
 
     return <div className='car-list'>
