@@ -94,3 +94,22 @@ Use dispatch function to dispatch the addCar action creator.
 Call action creator passing in the name and cost values as the action payload object.
 
 Display a list of cars in the CarList component.
+
+# Weird double keys
+
+Inside the CarList component we are going to use the useSelector hook to get access to the state values of the carsSlice (cars).
+
+const cars  = useSelector(state => {
+        return state.cars.cars;
+    });
+
+We are going to use the map function to iterate over the cars array and display a list of cars.
+
+Repeating property names can cause engineers to think that there is some kind of a bug in the app.
+
+Fixing the double keys:
+
+const cars = useSelector(state => {
+    return state.cars.data;
+});
+

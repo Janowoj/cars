@@ -4,7 +4,7 @@ const carsSlice = createSlice({
     name: 'cars',
     initialState: {
         searchTerm: '',
-        cars: []
+        data: []
     },
     reducers: {
         changeSearchTerm(state, action) {
@@ -16,7 +16,7 @@ const carsSlice = createSlice({
             // action.payload === {name: 'ford', cost: 120}
             // nanoId() is a built-in function that generates a random string
 
-            state.cars.push({
+            state.data.push({
                 name: action.payload.name,
                 cost: action.payload.cost,
                 id: nanoid()
@@ -26,8 +26,8 @@ const carsSlice = createSlice({
 
             // assumption:
             // action.payload === the id of the car to remove
-            const updated = state.cars.filter(car => car.id !== action.payload);
-            state.cars = updated;
+            const updated = state.data.filter(car => car.id !== action.payload);
+            state.data = updated;
         }
     }
 });
