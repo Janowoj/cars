@@ -80,3 +80,17 @@ We don't need to use --> id: Math.random()
 # Form Values to update the state
 
 We are going to use the useSelector hook to get access to the state values of the formSlice (name and cost).
+
+In the CarForm component we are going to use the useDispatch hook to get access to the dispatch function.
+
+# Dispatching during the form submission
+
+Create onSubmit handler function in the CarForm component.
+
+Add a button to the CarForm component.
+
+Use dispatch function to dispatch the addCar action creator.
+
+Call action creator passing in the name and cost values as the action payload object.
+
+Display a list of cars in the CarList component.
