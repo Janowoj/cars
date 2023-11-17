@@ -22,36 +22,37 @@ function CarForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(addCar({ name: name, cost: cost }));
+        dispatch(changeCost(0));
+        dispatch(changeName(''));
     };
 
     return <div className="car-form panel">
-        <h4 className="subtitle is-3">Add Car
-            <form onSubmit={handleSubmit}>
-                <div className="field-group">
-                    <div className="field">
-                        <label className="label">Name</label>
-                        <input
-                            className="input is-expended"
-                            value={name}
-                            onChange={handleNameChange}
-                        />
-                    </div>
-
-                    <div className="field">
-                        <label className="label">Cost</label>
-                        <input
-                            className="input is-expended"
-                            value={cost || ''}
-                            onChange={handleCostChange}
-                            type='number'
-                        />
-                    </div>
-                </div>
+        <h4 className="subtitle is-3">Add Car</h4>
+        <form onSubmit={handleSubmit}>
+            <div className="field-group">
                 <div className="field">
-                    <button className="button is-link">Submit</button>
+                    <label className="label">Name</label>
+                    <input
+                        className="input is-expended"
+                        value={name}
+                        onChange={handleNameChange}
+                    />
                 </div>
-            </form>
-        </h4>
+
+                <div className="field">
+                    <label className="label">Cost</label>
+                    <input
+                        className="input is-expended"
+                        value={cost || ''}
+                        onChange={handleCostChange}
+                        type='number'
+                    />
+                </div>
+            </div>
+            <div className="field">
+                <button className="button is-link">Submit</button>
+            </div>
+        </form>
     </div>;
 }
 export default CarForm;

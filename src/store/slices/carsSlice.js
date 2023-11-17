@@ -4,7 +4,7 @@ const carsSlice = createSlice({
     name: 'cars',
     initialState: {
         searchTerm: '',
-        data: []
+        data: [],
     },
     reducers: {
         changeSearchTerm(state, action) {
@@ -19,7 +19,7 @@ const carsSlice = createSlice({
             state.data.push({
                 name: action.payload.name,
                 cost: action.payload.cost,
-                id: nanoid()
+                id: nanoid(),
             });
         },
         removeCar(state, action) {

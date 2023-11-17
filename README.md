@@ -113,3 +113,12 @@ const cars = useSelector(state => {
     return state.cars.data;
 });
 
+# Form reset on submission
+
+Inside the haandleSubmit function we can use mutliple dispatch calls:
+
+dispatch(changeCost(0));
+dispatch(changeName(''));
+
+Mutliple dispatch calls are the sign that we need the 'extraReducers' property in the carSlice.
+
