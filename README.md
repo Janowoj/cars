@@ -122,3 +122,14 @@ dispatch(changeName(''));
 
 Mutliple dispatch calls are the sign that we need the 'extraReducers' property in the carSlice.
 
+# Extra reducers
+
+We can use the 'extraReducers' property to listen to the action creators that are defined in the other slices:
+
+extraReducers(builder) {
+        builder.addCase(addCar, (state, action) => {
+            state.name = '';
+            state.cost = 0;
+        });
+    }
+
