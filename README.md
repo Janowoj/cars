@@ -133,3 +133,7 @@ extraReducers(builder) {
         });
     }
 
+# Derived state
+
+data and searchTerm are the two pieces of state that we can use to calculate the filteredCars array.
+
