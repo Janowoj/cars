@@ -10,7 +10,7 @@ function CarList() {
 
 
 
-        return state.flter((car) => car.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        return data.filter((car) => car.name.toLowerCase().includes(searchTerm.toLowerCase()));
     });
 
     const handleCarDelete = (car) => {
