@@ -137,3 +137,15 @@ extraReducers(builder) {
 
 data and searchTerm are the two pieces of state that we can use to calculate the filteredCars array.
 
+# Receiving total value
+
+Inside the CarValue component we are going to use the useSelector hook to get access to the state values of the carsSlice (totalCost).
+
+Then we create filteredCars array and calculate the totalCost value by using the filer method.
+
+Then out of this filterd list of cars we will take a look at these different cars cost values and sum up them all together.
+
+We can use for of loop to iterate over the filteredCars array and sum up the cost values.
+
+We can also use the REDUCE method to iterate over the filteredCars array and sum up the cost values. --> THIS IS THE BEST SOLUTION!
+
