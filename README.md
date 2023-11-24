@@ -147,5 +147,28 @@ Then out of this filterd list of cars we will take a look at these different car
 
 We can use for of loop to iterate over the filteredCars array and sum up the cost values.
 
-We can also use the REDUCE method to iterate over the filteredCars array and sum up the cost values. --> THIS IS THE BEST SOLUTION!
+We can also use the REDUCE method to iterate over the filteredCars array and sum up the cost values. --> THIS IS THE BEST SOLUTION! (more javascripty)
+
+# Highlighting existing cars
+
+WE want to create anotherDERIVED state (pochodny stan) value that is going to be a list of cars that match the search term.
+
+We could do this by returning slightly different array from the useSelector hook:
+
+[
+    {id: 1, name: 'Ford', cost: 100, bold: true},
+    {id: 2, name: 'Tesla', cost: 200, bold: false},
+    {id: 3, name: 'Toyota', cost: 300, bold: false},
+]
+
+But it is NOT GOOD PRACTICE to change our data model just to suit the needs of the UI.
+
+Our dara model represents a CAR OBJECT, and it doesn't make a sense to add a new property to the car object.
+
+... so we will add a logic to the renderedCars function.
+
+WE have to get acces to state.form.name
+
+In our LIST OF CARS we need to return both list of cars and the curreent name property value.
+
 
